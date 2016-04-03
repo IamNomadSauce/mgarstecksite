@@ -10,6 +10,8 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
+# Simple_form
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
