@@ -1,5 +1,6 @@
-<h1>Pics/index.html.erb</h1>
+<h1>PORTFOLIO</h1>
 
+<h3><%= link_to "Post New Picture", new_pic_path %></h3>
 <% @pics.each do |pic| %>
   <h2><%= link_to pic.title, pic %></h2>
 
