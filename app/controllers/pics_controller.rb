@@ -38,6 +38,7 @@ class PicsController < ApplicationController
 
   def destroy
     @pic.destroy
+    flash[:success] = "Picture Deleted"
     redirect_to pics_path
   end
 
