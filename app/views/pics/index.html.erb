@@ -1,9 +1,16 @@
-<h1>PORTFOLIO</h1>
+<div class="page-header" align="center">
+  <h1>PORTFOLIO</h1>
+  <!-- Add "user logged in?" functionality -->
+  <%= link_to "Post New Picture", new_pic_path, class: "btn btn-primary" %>
+</div>
 
-<h3><%= link_to "Post New Picture", new_pic_path %></h3>
+
 <% @pics.each do |pic| %>
-  <h2><%= link_to pic.title, pic %></h2>
-
+    <div class="row" align="center">
+      <div class="well well-lg">
+        <h2><%= link_to pic.title, pic %></h2>
+      </div>
+    </div>
 <% end %>
 
 
