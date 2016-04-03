@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'pages/index'
   get 'pages/portfolio'
   get 'pages/about'
+  resources :pics
 
   root 'pages#index'
 
