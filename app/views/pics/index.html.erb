@@ -9,6 +9,11 @@
     <div class="row" align="center">
       <div class="well well-lg">
         <h2><%= link_to pic.title, pic %></h2>
+          <ul class = "edit-delete">
+            <li><%= link_to "Edit", edit_pic_path(pic), class: 'button' %></li>
+            <li><%= link_to "Destroy", pic_path(pic), class: 'button', method: :delete, data: {confirm: "Are you sure?"} %></li>
+          </ul>
+
       </div>
     </div>
 <% end %>
