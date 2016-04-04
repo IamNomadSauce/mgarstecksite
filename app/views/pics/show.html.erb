@@ -1,5 +1,6 @@
 <h1><%= @pic.title %></h1>
 <h3> <%= @pic.description %></h3>
+<%= @pic.user.email %>
 
 <%= link_to "Back", pics_path %>
 <%= link_to "Edit", edit_pic_path %>
