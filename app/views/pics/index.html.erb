@@ -3,7 +3,7 @@
   <div class="col-md-12">
 
     <div class="page-header center">
-      <h3>HOME PAGE</h3>
+      <h3>PORTFOLIO</h3>
     </div>
     <div class="control-label col-sm-offset-2 col-sm-8">
 
@@ -12,6 +12,7 @@
           <div class="row" align="center">
             <div class="well well-lg">
               <h2><%= link_to pic.title, pic %></h2>
+              <%= link_to pic.image.url(:medium), pic %>
                 <ul class = "edit-delete">
                   <li><%= link_to "Edit", edit_pic_path(pic), class: 'button' %></li>
                   <li><%= link_to "Destroy", pic_path(pic), class: 'button', method: :delete, data: {confirm: "Are you sure?"} %></li>

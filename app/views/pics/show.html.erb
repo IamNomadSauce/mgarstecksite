@@ -1,9 +1,19 @@
-<h1><%= @pic.title %></h1>
-<h3> <%= @pic.description %></h3>
-<%= @pic.user.email %>
+<div class="row">
+  <div class="col-md-12">
 
-<%= link_to "Back", pics_path %>
-<%= link_to "Edit", edit_pic_path %>
-<%= link_to "Destroy", pic_path, method: :delete, data: {confirm: "Are you sure?"} %>
+    <div class="page-header center">
+      <h1><%= @pic.title %></h1>
+    </div>
+    <div class="control-label col-sm-offset-2 col-sm-8">
+      <%= image_tag @pic.image.url %>
+      <h3> <%= @pic.description %></h3>
+      <%= @pic.user.email %>
+
+      <%= link_to "Back", pics_path, class: 'btn btn-primary btn-lg' %>
+      <%= link_to "Edit", edit_pic_path, class: 'btn btn-primary btn-lg' %>
+      <%= link_to "Destroy", pic_path, class: 'btn btn-primary btn-lg', method: :delete, data: {confirm: "Are you sure?"} %>
+    </div>
+  </div>
+</div>
 
 

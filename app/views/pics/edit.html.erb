@@ -1,2 +1,13 @@
-<h1>Edit Picture</h1>
-<%= render 'form' %>
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="page-header center">
+      <h1><h1>Edit </h1><%= @pic.title %></h1>
+    </div>
+    <div class="control-label col-sm-offset-2 col-sm-8">
+
+      <%= image_tag @pic.image.url(:medium) %>
+      <%= render 'form' %>
+    </div>
+  </div>
+</div>
