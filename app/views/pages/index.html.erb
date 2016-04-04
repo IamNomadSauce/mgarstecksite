@@ -1,9 +1,52 @@
 
-<div class="page-header center">
-  <h3>HOME PAGE</h3>
-  <% if user_signed_in? %>
-    <h1>Signed in as <%= current_user.email %></h1>
-  <% else %>
-    <h1>Not Signed In</h1>
-  <% end %>
+<div class="row">
+  <div class="col-md-12">
+
+
+    <div class="page-header center">
+      <h3>HOME PAGE</h3>
+    </div>
+    <div class="control-label col-sm-offset-2 col-sm-8">
+
+
+        <% if user_signed_in? %>
+          <div class="panel panel-info">
+            <div class="panel-heading">Signed in as</div>
+            <div class="panel-body">
+              <h3><%= current_user.email %></h3>
+            </div>
+
+            <div class="panel-heading">User ID</div>
+            <div class="panel-body">
+              <h3><%= current_user.id %></h3>
+            </div>
+
+            <div class="panel-heading">Number of Pictures</div>
+            <div class="panel-body">
+              <h3><%= current_user.pics.length %></h3>
+            </div>
+          </div>
+<!-- Display all of your pics -->
+
+          <h2 class="page-header">Your Pictures</h2>
+            <% current_user.pics.each do |pic| %>
+                <div class="row" align="center">
+                  <div class="well well-lg">
+                    <h2><%= link_to pic.title, pic %></h2>
+                    <ul class = "edit-delete">
+                      <li><%= link_to "Edit", edit_pic_path(pic), class: 'button' %></li>
+                      <li><%= link_to "Destroy", pic_path(pic), class: 'button', method: :delete, data: {confirm: "Are you sure?"} %></li>
+                    </ul>
+
+                  </div>
+                </div>
+            <% end %>
+
+        <% else %>
+          <h1>Not Signed In</h1>
+
+        <% end %>
+
+    </div>
+  </div>
 </div>
