@@ -1,9 +1,12 @@
 class PicsController < ApplicationController
   before_action :find_pic, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  before_action :require_user, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
+
+  helper_method :current_user, :user_signed_in?
 
   def index
-    @pics = Pic.all.order("created_at DESC")
+    @pics = Pic.all.order('created_at DESC')
   end
 
   def new
@@ -39,7 +42,7 @@ class PicsController < ApplicationController
 
   def destroy
     @pic.destroy
-    flash[:success] = "Picture Deleted"
+
     redirect_to pics_path
   end
 
@@ -51,5 +54,19 @@ class PicsController < ApplicationController
 
   def find_pic
     @pic = Pic.find(params[:id])
+  end
+
+  def require_user
+    if !user_signed_in?
+      flash[:danger] = "You must be logged in to perform that action"
+      redirect_to root_path
+    end
+  end
+
+  def require_same_user
+    if current_user != @pic.user
+      flash[:danger] = "You can only do this action if you are the author"
+      redirect_to root_path
+    end
   end
 end

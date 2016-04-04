@@ -1,2 +1,9 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+
+<div class="page-header center">
+  <h3>HOME PAGE</h3>
+  <% if user_signed_in? %>
+    <h1>Signed in as <%= current_user.email %></h1>
+  <% else %>
+    <h1>Not Signed In</h1>
+  <% end %>
+</div>
