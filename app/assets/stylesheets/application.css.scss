@@ -1,9 +1,13 @@
-$navbar-default-bg: #ffffff;
-
+/*
+*= require 'masonry/transitions'
+*= require_tree .
+*= require_self
+*/
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$navbar-default-bg: #ffffff;
 #logo {
   float: left;
   font-size: 1.7em;
@@ -19,12 +23,7 @@ $navbar-default-bg: #ffffff;
   text-align: center;
 }
 
-.jumbotron {
-  background-image: asset-url('main_header_4.jpg');
-  background-size: cover;
-  height: 485px;
-  padding-left: 10px;
-}
+
 
 
 
@@ -58,35 +57,11 @@ footer ul li {
   margin-right: auto;
 }
 
-.article-actions {
-  border-top: 1px solid #a6a6a6;
-  padding-top: 20px
-}
 
 .description {
-  margin: 0px;
+  margin: 0;
 }
 
-.article-title {
-  font-weight: bold;
-  font-size: 1.5em;
-
-}
-
-.article-body {
-  border-top: 1px, solid, #a6a6a6;
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-}
-
-.article-meta-details {
-  border-top: 1px solid #a6a6a6;
-  margin-top: 15px;
-  padding-top: 10px;
-
-
-}
 
 .listing {
 
@@ -99,44 +74,51 @@ footer ul li {
   display: block;
 }
 
-.btn-circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+
+#pics {
+
+  margin: 0 auto;
+  width: 100%;
+  .box {
+    margin: 5px;
+    width: 300px;
+    box-shadow: 0 1px 2px 0 rgba(195, 192, 195, 0.33);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
+#pic_show {
 
-.edit-delete {
-  display: block;
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  width: 100px;
-  text-align: center;
-  background-color: #4377b4;
+  .panel-heading {
+    padding: 0;
+  }
+  .pic_image {
+    img {
+      max-width: 100%;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .panel-body {
+    padding: 35px;
+    .description {
+      font-weight: bold;
+      line-height: 1.75;
+      margin: 0;
+      text-align: center;
+    }
+  }
+  .panel-footer {
+    padding: 20px 25px;
+    p {
+      margin: 0;
+    }
+  }
 }
-
-.edit-delete li {
-  list-style: none;
-  font-color: white;
-  width: 100px;
-  margin: 0;
-  padding-bottom: 5px;
-  padding-top: 5px;
-  border-bottom: 1px solid #4068a2;
-
-
-}
-.edit-delete li:hover {
-  background-color: #ff00cc;
-
-}
-
-.edit-delete a {
-  color: white;
-  display: block;
-
-  text-decoration: none;
-
-}
-

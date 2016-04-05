@@ -14,7 +14,10 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 # Devise for User functionality
 gem 'devise', '~> 3.5', '>= 3.5.6'
+# Paperclip for uploading pictures
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
+# For styling
+gem 'masonry-rails', '~> 0.2.4'
 
 
 # Use Uglifier as compressor for JavaScript assets
