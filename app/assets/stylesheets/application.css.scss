@@ -8,6 +8,11 @@
 @import "bootstrap";
 
 $navbar-default-bg: #ffffff;
+
+.navbar {
+  margin-bottom: 0;
+}
+
 #logo {
   float: left;
   font-size: 1.7em;

@@ -1,0 +1,33 @@
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#"><h4>MASTER OPTIONS</h4></a>
+      </li>
+      <li class="nav-divider"></li>
+      <li>
+        <%= link_to 'EDIT PROFILE', edit_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to 'ADD PICTURES', new_pic_path %>
+      </li>
+      <li>
+        <a href="#">Overview</a>
+      </li>
+      <li>
+        <a href="#">Events</a>
+      </li>
+      <li>
+        <a href="#">About</a>
+      </li>
+      <li>
+        <a href="#">Services</a>
+      </li>
+      <li>
+        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete %>
+      </li>
+    </ul>
+  </div>
+</div>

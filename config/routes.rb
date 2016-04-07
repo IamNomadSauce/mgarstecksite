@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'pages/portfolio'
   get 'pages/about'
   resources :pics
+  get 'pages/control'
 
   root 'pages#index'
 
