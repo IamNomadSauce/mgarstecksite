@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   resources :pics
   get 'pages/control'
 
-  root 'pages#index'
-
+  root 'pages#control'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,26 @@
+<div id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#"><h4>CLIENTS</h4></a>
+      </li>
+      <li class="nav-divider"></li>
+      <li>
+        <%= link_to 'ALL', clients_path %>
+      </li>
+      <li>
+        <a href="#">MANAGE PHOTOS</a>
+      </li>
+      <li>
+        <a href="#">ANALYTICS</a>
+      </li>
+      <li>
+        <%= link_to "CLIENTS", clients_path %>
+      </li>
+      <li>
+        <%= link_to "LOG OUT", destroy_user_session_path, method: :delete %>
+      </li>
+    </ul>
+  </div>
+</div>

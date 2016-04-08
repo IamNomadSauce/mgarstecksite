@@ -17,7 +17,7 @@
         <a href="#">ANALYTICS</a>
       </li>
       <li>
-        <a href="#">CLIENTS</a>
+        <%= link_to "CLIENTS", clients_path %>
       </li>
       <li>
         <%= link_to "LOG OUT", destroy_user_session_path, method: :delete %>
