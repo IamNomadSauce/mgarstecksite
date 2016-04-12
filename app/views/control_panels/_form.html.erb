@@ -1,0 +1,14 @@
+<%= simple_form_for(@control_panel) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :index %>
+    <%= f.input :update %>
+    <%= f.input :show %>
+    <%= f.input :destroy %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

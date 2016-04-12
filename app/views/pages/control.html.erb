@@ -1,7 +1,7 @@
 <div id="wrapper">
 
   <!-- Sidebar -->
-  <%= render 'sidebar' %>
+  <%= render 'layouts/sidebar' %>
 
   <!-- Page Content -->
   <div id="page-content-wrapper">
@@ -19,17 +19,3 @@
   </div>
 </div>
 <!-- /#wrapper -->
-
-
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- Menu Toggle Script -->
-<script>
-  $("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
-  });
-</script>

@@ -1,31 +1,43 @@
-<%= render 'sidebar' %>
-<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"></a>
+<%= render 'layouts/sidebar' %>
+
 <div id="row">
   <div class="col-md-8 col-md-offset-3" >
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3>CLIENT CONTROL PANEL</h3>
+      </div>
+      <div class="panel-body">
+        <div class="btn-group pull-right">
+          <%= link_to "NEW CLIENT", new_client_path, class: 'btn btn-primary btn-lg' %>
+        </div>
+      </div>
+    </div>
+
     <% @clients.each do |client| %>
-        <div class="panel panel-info" align="center">
+        <div class="panel panel-info">
           <div class="box panel-heading panel-default">
             <%= client.firstname.upcase %> <%= client.lastname.upcase %>
           </div>
-          <div class="panel-body center">
+          <div class="panel-body">
             <%= client.description %>
           </div>
           <div class="panel-footer">
             <div class="row">
-              <div class="col-md-6 col-offset-2">
+              <div class="col-md-12 col-offset-2">
                 <%= client.email %>, <%= client.phone %>
                 <div class="btn-group pull-right">
                   <% if user_signed_in? %>
-                      <%= link_to 'Edit', edit_client_path(client) %>
-                      <%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %>
+                      <%= link_to 'EDIT', edit_client_path(client), class:"btn btn-primary btn-md" %>
+                      <%= link_to 'DELETE', client, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-primary btn-md" %>
                   <% end %>
                 </div>
               </div>
             </div>
           </div>
     <% end %>
+    </div>
+
   </div>
 </div>
 
-</div>
 

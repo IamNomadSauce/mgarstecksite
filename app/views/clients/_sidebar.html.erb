@@ -10,7 +10,7 @@
         <%= link_to "#{action_name.upcase}", clients_path %>
       </li>
       <li>
-        <%= render 'clients/new' %>
+        <%= link_to 'NEW CLIENT', new_client_path %>
       </li>
       <li>
         <%= link_to "LOG OUT", destroy_user_session_path, method: :delete %>

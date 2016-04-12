@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :control_panels
   resources :clients
   devise_for :users
   get 'pages/index'
